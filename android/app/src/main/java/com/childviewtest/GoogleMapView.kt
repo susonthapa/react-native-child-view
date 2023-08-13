@@ -16,5 +16,7 @@ class GoogleMapView(reactContext: ReactContext) : FrameLayout(reactContext) {
         view.getMapAsync {
 
         }
+
+        view.onCreate(null);
     }
 }

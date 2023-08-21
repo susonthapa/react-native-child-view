@@ -13,10 +13,10 @@ class GoogleMapView(reactContext: ReactContext) : FrameLayout(reactContext) {
             view,
             LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
         )
+        view.onCreate(null)
+        view.onStart()
         view.getMapAsync {
 
         }
-
-        view.onCreate(null);
     }
 }

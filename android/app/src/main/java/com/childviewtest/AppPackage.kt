@@ -11,6 +11,6 @@ class AppPackage : ReactPackage {
     }
 
     override fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, *>> {
-        return mutableListOf(GoogleMapViewManager())
+        return mutableListOf(GoogleMapViewManager(), MapMarkerManager())
     }
 }

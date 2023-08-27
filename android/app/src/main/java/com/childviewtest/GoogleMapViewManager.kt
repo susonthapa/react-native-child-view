@@ -15,10 +15,16 @@ class GoogleMapViewManager : ViewGroupManager<GoogleMapView>() {
 
     override fun addView(parent: GoogleMapView?, child: View?, index: Int) {
         child?.let {
-            parent?.addCustomView(it)
+            parent?.addMapChildView(it, index)
         }
-        super.addView(parent, child, index)
     }
 
+    override fun getChildAt(parent: GoogleMapView?, index: Int): View? {
+        return parent?.getMapChildView(index)
+    }
+
+    override fun removeViewAt(parent: GoogleMapView?, index: Int) {
+        parent?.removeMapChildView(index)
+    }
 
 }

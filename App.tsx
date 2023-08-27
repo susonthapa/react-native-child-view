@@ -5,18 +5,17 @@
  * @format
  */
 
-import type { PropsWithChildren } from 'react';
 import React from 'react';
 import {
-  SafeAreaView, StatusBar,
-  StyleSheet, useColorScheme,
+  SafeAreaView, StatusBar, useColorScheme,
   View
 } from 'react-native';
 
 import {
   Colors
 } from 'react-native/Libraries/NewAppScreen';
-import GoogleMapView from './src/GoogleMapView';
+import MapScreen from './src/MapScreen';
+
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -34,7 +33,7 @@ function App(): JSX.Element {
       <View style={{
         height: '100%',
       }}>
-        <GoogleMapView />
+        <MapScreen />
       </View>
     </SafeAreaView>
   );

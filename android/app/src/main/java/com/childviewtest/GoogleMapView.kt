@@ -6,12 +6,11 @@ import android.widget.FrameLayout
 import com.facebook.react.bridge.ReactContext
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapView
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
 
 class GoogleMapView(reactContext: ReactContext) : FrameLayout(reactContext) {
 
     private var googleMap: GoogleMap? = null
+    private val mapChildren = mutableListOf<View>()
 
     init {
         val view = MapView(reactContext)
@@ -26,13 +25,25 @@ class GoogleMapView(reactContext: ReactContext) : FrameLayout(reactContext) {
         }
     }
 
-    fun addCustomView(view: View) {
+    fun addMapChildView(view: View, index: Int) {
         if (view is MapMarker) {
             googleMap?.addMarker(
                 view.getMarkerOptions()
             )?.let {
                 view.setMarker(it)
             }
+            mapChildren.add(index, view)
         }
+    }
+
+    fun removeMapChildView(index: Int) {
+        val view = mapChildren.removeAt(index)
+        if (view is MapMarker) {
+            view.marker?.remove()
+        }
+    }
+
+    fun getMapChildView(index: Int): View {
+        return mapChildren[index]
     }
 }

@@ -7,7 +7,6 @@
 
 import React from 'react';
 import {
-  requireNativeComponent,
   SafeAreaView, StatusBar, useColorScheme,
   View
 } from 'react-native';
@@ -15,8 +14,8 @@ import {
 import {
   Colors
 } from 'react-native/Libraries/NewAppScreen';
+import StackViewComponent from './StackView';
 
-const StackView = requireNativeComponent("StackView")
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -33,11 +32,8 @@ function App(): JSX.Element {
       />
       <View style={{
         height: '100%',
-        backgroundColor: 'yellow',
       }}>
-        <StackView>
-
-        </StackView>
+        <StackViewComponent />
       </View>
     </SafeAreaView>
   );

@@ -15,6 +15,9 @@
 		7699B88040F8A987B510C191 /* libPods-ChildViewTest-ChildViewTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ChildViewTest-ChildViewTestTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		E06839E72ACEEF8900466919 /* StackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06839E62ACEEF8900466919 /* StackView.swift */; };
+		E06839EC2ACEF28F00466919 /* AppPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = E06839EB2ACEF28F00466919 /* AppPackage.m */; };
+		E06839EE2ACEF2A200466919 /* StackViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06839ED2ACEF2A200466919 /* StackViewManager.swift */; };
+		E0EAA1FD2AD42C6B00C01F72 /* StackShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EAA1FC2AD42C6B00C01F72 /* StackShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,9 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-ChildViewTest-ChildViewTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChildViewTest-ChildViewTestTests.release.xcconfig"; path = "Target Support Files/Pods-ChildViewTest-ChildViewTestTests/Pods-ChildViewTest-ChildViewTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		E06839E52ACEEF8900466919 /* ChildViewTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChildViewTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		E06839E62ACEEF8900466919 /* StackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackView.swift; sourceTree = "<group>"; };
+		E06839EB2ACEF28F00466919 /* AppPackage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppPackage.m; sourceTree = "<group>"; };
+		E06839ED2ACEF2A200466919 /* StackViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewManager.swift; sourceTree = "<group>"; };
+		E0EAA1FC2AD42C6B00C01F72 /* StackShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackShadowView.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -89,8 +95,9 @@
 		13B07FAE1A68108700A75B9A /* ChildViewTest */ = {
 			isa = PBXGroup;
 			children = (
+				E06839E82ACEF05500466919 /* stack */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
-				E06839E62ACEEF8900466919 /* StackView.swift */,
+				E06839EB2ACEF28F00466919 /* AppPackage.m */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
@@ -151,6 +158,16 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-ChildViewTest-ChildViewTestTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		E06839E82ACEF05500466919 /* stack */ = {
+			isa = PBXGroup;
+			children = (
+				E06839E62ACEEF8900466919 /* StackView.swift */,
+				E0EAA1FC2AD42C6B00C01F72 /* StackShadowView.swift */,
+				E06839ED2ACEF2A200466919 /* StackViewManager.swift */,
+			);
+			name = stack;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,8 +435,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				E0EAA1FD2AD42C6B00C01F72 /* StackShadowView.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				E06839E72ACEEF8900466919 /* StackView.swift in Sources */,
+				E06839EE2ACEF2A200466919 /* StackViewManager.swift in Sources */,
+				E06839EC2ACEF28F00466919 /* AppPackage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

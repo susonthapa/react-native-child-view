@@ -10,17 +10,18 @@ import com.google.android.gms.maps.MapView
 class GoogleMapView(reactContext: ReactContext) : FrameLayout(reactContext) {
 
     private var googleMap: GoogleMap? = null
+    private var mapView: MapView? = null
     private val mapChildren = mutableListOf<View>()
 
     init {
-        val view = MapView(reactContext)
+        mapView = MapView(reactContext)
         addView(
-            view,
+            mapView,
             LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT)
         )
-        view.onCreate(null)
-        view.onStart()
-        view.getMapAsync {
+        mapView?.onCreate(null)
+        mapView?.onStart()
+        mapView?.getMapAsync {
             googleMap = it
         }
     }
@@ -45,5 +46,13 @@ class GoogleMapView(reactContext: ReactContext) : FrameLayout(reactContext) {
 
     fun getMapChildView(index: Int): View {
         return mapChildren[index]
+    }
+
+    fun getMapChildCount(): Int {
+        return mapChildren.size
+    }
+
+    fun onDestroy() {
+        mapView?.onDestroy()
     }
 }

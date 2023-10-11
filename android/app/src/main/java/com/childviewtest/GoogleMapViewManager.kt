@@ -27,4 +27,13 @@ class GoogleMapViewManager : ViewGroupManager<GoogleMapView>() {
         parent?.removeMapChildView(index)
     }
 
+    override fun getChildCount(parent: GoogleMapView?): Int {
+        return parent?.getMapChildCount() ?: 0
+    }
+
+    override fun onDropViewInstance(view: GoogleMapView) {
+        view.onDestroy()
+        super.onDropViewInstance(view)
+    }
+
 }

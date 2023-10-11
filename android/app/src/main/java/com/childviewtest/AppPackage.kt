@@ -1,5 +1,6 @@
 package com.childviewtest
 
+import com.childviewtest.stack.StackViewManager
 import com.facebook.react.ReactPackage
 import com.facebook.react.bridge.NativeModule
 import com.facebook.react.bridge.ReactApplicationContext
@@ -11,6 +12,6 @@ class AppPackage : ReactPackage {
     }
 
     override fun createViewManagers(reactContext: ReactApplicationContext): MutableList<ViewManager<*, *>> {
-        return mutableListOf(GoogleMapViewManager(), MapMarkerManager())
+        return mutableListOf(GoogleMapViewManager(), MapMarkerManager(), StackViewManager())
     }
 }

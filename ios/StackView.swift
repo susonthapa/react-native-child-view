@@ -25,7 +25,6 @@ class StackView: UIView {
   }
   
   override func removeReactSubview(_ subview: UIView!) {
-    super.removeReactSubview(subview)
     subview.removeFromSuperview()
   }
   

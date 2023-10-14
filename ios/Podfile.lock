@@ -70,6 +70,11 @@ PODS:
     - FlipperKit/FlipperKitNetworkPlugin
   - fmt (6.2.1)
   - glog (0.3.5)
+  - GoogleMaps (8.2.0):
+    - GoogleMaps/Maps (= 8.2.0)
+  - GoogleMaps/Base (8.2.0)
+  - GoogleMaps/Maps (8.2.0):
+    - GoogleMaps/Base
   - hermes-engine (0.72.3):
     - hermes-engine/Pre-built (= 0.72.3)
   - hermes-engine/Pre-built (0.72.3)
@@ -516,6 +521,7 @@ DEPENDENCIES:
   - FlipperKit/FlipperKitUserDefaultsPlugin (= 0.182.0)
   - FlipperKit/SKIOSNetworkPlugin (= 0.182.0)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - GoogleMaps (= 8.2.0)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - libevent (~> 2.1.12)
   - OpenSSL-Universal (= 1.1.1100)
@@ -567,6 +573,7 @@ SPEC REPOS:
     - Flipper-PeerTalk
     - FlipperKit
     - fmt
+    - GoogleMaps
     - libevent
     - OpenSSL-Universal
     - SocketRocket
@@ -669,6 +676,7 @@ SPEC CHECKSUMS:
   FlipperKit: 2efad7007d6745a3f95e4034d547be637f89d3f6
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
+  GoogleMaps: 081f2547b60a1c0870a8f49166a653900e5055d5
   hermes-engine: 10fbd3f62405c41ea07e71973ea61e1878d07322
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
@@ -708,6 +716,6 @@ SPEC CHECKSUMS:
   Yoga: 8796b55dba14d7004f980b54bcc9833ee45b28ce
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
 
-PODFILE CHECKSUM: 4c19b4f7950a64fc4366ec3700422fd528ab3991
+PODFILE CHECKSUM: 7abe798de2fb29ee1f347774b6c3463740956a1e
 
 COCOAPODS: 1.13.0
